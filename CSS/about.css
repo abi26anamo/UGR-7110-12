@@ -1,0 +1,139 @@
+*{
+    list-style: none;
+    text-decoration: none;
+   
+}
+body{
+    width:100%;
+    height:100vh;
+    display: grid;   
+    justify-self: center;
+    align-self: center;
+    background:#000000;
+    grid-template-areas: 
+    "header header header"
+    "navigation content content"
+    "footer footer footer";
+    grid-template-rows: 50px 1fr 1fr 25px;
+    grid-template-columns: 200px 1fr  ;
+}
+@media  screen and (max-width:660px) {
+    body{
+        grid-template-areas: 
+        "header"
+        "navigation"
+        "content"
+        "footer";
+        grid-template-rows: 100px 1fr 1fr 170px;
+        grid-template-columns: 1fr;
+        background:bottom left;
+        margin:0;
+        padding:0;
+    } 
+    .main-about{
+        background: blueviolet;
+    }
+    .main-about__about--text p{
+       font-size: 20px;
+    }
+    .main-about__about--image{
+       display:inline-block;
+    }
+
+}
+.header{
+    background-color:yellow;
+    grid-area: header;
+    text-align: center;
+    align-self: center;
+    color: black;
+ }
+
+.sidebar{
+   background-color: yellow;
+   grid-area: navigation;
+   border:none;
+   width: 100%;
+   
+}
+.sidebar__profileimage img{
+    border-radius: 75px;
+} 
+ .sidebar__navbar--list{
+    padding: 1rem 3rem;  
+}
+  .sidebar__navbar--item{
+    height: 55px;
+    display: flex;
+    flex-wrap: nowrap; 
+}
+ .sidebar__navbar--link{
+    display: block;
+    padding: 1.5em;
+    margin: 1.5em 0; 
+    background-size: contain;
+    background: #333;
+    color: ghostwhite;
+    border-radius: 5em;
+    text-transform: uppercase;
+}
+ .sidebar__navbar--link:hover{
+    background:blue;
+}
+.sidebar__navbar--link:active{
+    background: gray;
+}
+.sidebar__navbar--link:focus{
+    background: red;
+}
+.main-about{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+} 
+.main-about__about{
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.main-about__about--text{
+  font-size: 25px;
+  text-align: left;
+  color: white;
+}
+img{
+    max-width: 100%;
+}
+.footer{
+   background-color:yellow;
+   grid-area:footer;
+   justify-content: center;
+   align-items: center;
+}
+.footer--list{
+    display: flex;
+    flex:row wrap;
+    justify-content: center;
+    align-items: center;
+}
+.footer--link{
+    padding:5px;
+}
+.footer--item:hover{
+    transform: scale(1.5);
+    transform: rotate3d(45);
+}
+.footer h2{
+    text-align: center;
+    font-size: 18px;
+}
+.footer p{
+    text-align: center;
+    font-size: 18px;
+}
+
+ 
+

@@ -1,0 +1,144 @@
+*{
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    width:100%;
+    height:100vh;
+    display: grid;
+    justify-self: center;
+    align-self: center;
+    background:black;
+    grid-template-areas: 
+    "header header header"
+    "navigation content content"
+    "footer footer footer";
+    grid-template-rows: 50px 1fr 1fr 25px;
+    grid-template-columns: 200px 1fr 200px ;
+}
+.header{
+    background-color:yellow;
+    grid-area: header;
+    text-align: center;
+    align-self: center;
+    color: black;
+ }
+@media  screen and (max-width:660px) {
+    body{
+        grid-template-areas: 
+        "header"
+        "navigation"
+        "content"
+        "footer";
+        grid-template-rows: 100px 1fr 1fr 170px;
+        grid-template-columns: 1fr;
+        background:bottom left;
+        width: 100%;
+        margin:0;
+        padding:0;
+    }
+    .skill__table{
+        display: table;
+        color:black;
+        font-size: 20px;
+    }
+   .skill{
+      background: blueviolet;
+  }
+}
+
+.sidebar{
+   background-color: yellow;
+   grid-area: navigation;
+   border:none;
+   width: 100%;
+   
+}
+.sidebar img{
+    border-radius: 50%;
+}
+.sidebar__navbar--list{
+    padding: 1em 3em;
+}
+.sidebar__navbar--item{
+    height: 55px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.sidebar__navbar--link{
+    display: block;
+    padding: 1.5rem;
+    margin: 1.5em 0;
+    background: #333;
+    color: ghostwhite;
+    border-radius: 5em;
+    text-transform: uppercase;
+}
+.sidebar__navbar--link:hover{
+    background: blue;
+}
+.sidebar__navbar--link:active{
+    background: green;
+}
+.sidebar__navbar--link:focus{
+    background: red;
+}
+.skill{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: content;
+    font-size: 30px;
+    color:white;
+}
+.skill__table{
+    border: 1px solid white;
+    border-collapse: collapse;
+    width: 50%;
+    height: 75%;
+} 
+.skill__table--head{
+    border: 1px solid white;
+    border-collapse: collapse;
+    width: 50%;
+    height: 75%;
+} 
+.skill__table--cell{
+    border: 1px solid white;
+    border-collapse: collapse;
+    width: 50%;
+    height: 75%;
+} 
+.footer{
+    background-color:yellow;
+    grid-area:footer;
+    justify-content: center;
+    align-items: center;
+ }
+.footer--list{
+    display: flex;
+    flex:row wrap;
+    justify-content: center;
+    align-items: center;
+}
+.footer--item {
+    display: inline-block;
+}
+.footer--link{
+    padding:5px;
+} 
+.footer--link :hover{
+    transform: scale(1.5);
+    transform: rotate3d(45);
+}
+
+.footer p{
+    text-align: center;
+    font-size: 18px;
+}
+.footer h2{
+    text-align: center;
+    font-size: 18px;
+}
+
+
